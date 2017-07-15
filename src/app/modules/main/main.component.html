@@ -1,0 +1,40 @@
+<md-sidenav-container class="example-container">
+    <md-sidenav #sidenav mode="side" opened class="example-sidenav">
+        <md-toolbar color="primary" class="toolbar">
+            <img class="imgstyle" src="assets/logo.jpg">
+            <span class="gymtitle">Athlean Fitness Gym</span>
+        </md-toolbar>
+    </md-sidenav>
+
+    <div class="side-main">
+        <div class="example-sidenav-content">
+            <md-toolbar color="primary" class="maintoolbar">
+                <div class="main-tool-child">
+                    <div class="searchbar1">
+                        <md-icon class="searchicon">search</md-icon>
+                        <input class="searchbar" type="search" placeholder="Search..." autocomplete="off">
+                    </div>
+                </div>
+                <span class="fillgap"></span>
+                <div>
+                    <button md-icon-button class="btn-pos" [mdMenuTriggerFor]="menu">
+                       <md-icon>more_vert</md-icon>
+                    </button>
+                    <md-menu #menu="mdMenu" xPosition="after" yPosition="below" [overlapTrigger]="false">
+                        <button md-menu-item>
+                         <md-icon style="color: #e27575">settings</md-icon>
+                            <span>Settings</span>
+                            <span> </span>
+                        </button>
+                        <button md-menu-item>
+                             <md-icon style="color: #11114c">exit_to_app</md-icon>
+                             <span>Logout</span>
+                        </button>
+                    </md-menu>
+                </div>
+            </md-toolbar>
+            <h2>hiii </h2>
+            <div><img class="imgstyle" src="assets/logo.jpg"></div>
+        </div>
+    </div>
+</md-sidenav-container>
