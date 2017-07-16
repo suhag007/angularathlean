@@ -98,3 +98,43 @@
 .btn-pos {
 	padding-top: 10px;
 }
+
+
+
+/****** this page css ******/
+.pagelink {
+    position: relative;
+    cursor: pointer;
+    color: #a7a9ae;
+    transition: color .1s;
+    outline: none;
+    text-decoration: none;
+    display: block;
+}
+.link-outbody {
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 16px;
+    height: 48px;
+    padding: 0 16px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    align-items: center;
+
+}
+.sidenav-item-name {
+    margin-left: 24px;
+    font-size: 14px;
+}
+.md-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    line-height: 18px;
+}
+.cyan {
+    /*color: #9bffff;*/
+}
