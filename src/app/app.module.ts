@@ -15,7 +15,10 @@ import {
     MdSidenavModule,
     MdIconModule,
     MdMenuModule,
-    MdListModule
+    MdListModule,
+    MdDatepickerModule,
+    MdNativeDateModule,
+    MdGridListModule
 } from '@angular/material';
 import {
     AppComponent
@@ -104,6 +107,9 @@ import {
         FlexLayoutModule,
         MdMenuModule,
         MdListModule,
+        MdDatepickerModule, 
+        MdNativeDateModule,
+        MdGridListModule,
         RouterModule.forRoot(routes, {
             useHash: true
         }),

@@ -1,3 +1,83 @@
-<p>
-  addcustomer works!
-</p>
+<!-- **** html part of add customer component **** -->
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0">
+  <div class="item item-1" fxFlex="48%">
+            <md-card class="registration-card">
+        <md-card-header>
+            <md-card-title>
+                <h2>Registration form</h2>
+            </md-card-title>
+        </md-card-header>
+        <md-card-content>
+            <form>
+                <md-input-container>
+                    <input mdInput placeholder="Name">
+                </md-input-container>
+                <md-input-container>
+                    <input mdInput placeholder="Father Name">
+                </md-input-container>
+                <md-input-container>
+                    <input mdInput placeholder="Phone No">
+                </md-input-container>
+                <md-input-container>
+                    <input mdInput [mdDatepicker]="Join" placeholder="Joining Date">
+                    <button mdSuffix [mdDatepickerToggle]="Join"></button>
+                </md-input-container>
+                <md-datepicker #Join></md-datepicker>
+                <md-input-container>
+                    <input mdInput [mdDatepicker]="expire" placeholder="Valid Upto">
+                    <button mdSuffix [mdDatepickerToggle]="expire"></button>
+                </md-input-container>
+                <md-datepicker #expire></md-datepicker>
+                <p>
+                    <md-input-container class="example-full-width">
+                        <textarea mdInput placeholder="Address"></textarea>
+                    </md-input-container>
+                </p>
+                <table class="example-full-width" cellspacing="0">
+                    <tr>
+                        <td>
+                            <md-input-container class="example-full-width">
+                                <input mdInput placeholder="City" value="Jhajjar">
+                            </md-input-container>
+                        </td>
+                        <td>
+                            <md-input-container class="example-full-width">
+                                <input mdInput placeholder="State" value="Haryana">
+                            </md-input-container>
+                        </td>
+                        <td>
+                            <md-input-container class="example-full-width">
+                                <input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="124103">
+                                <md-hint align="end">{{postalCode.value.length}} / 6</md-hint>
+                            </md-input-container>
+                        </td>
+                    </tr>
+                </table>
+                <a md-raised-button color="primary">Submit</a>
+            </form>
+        </md-card-content>
+    </md-card>
+  </div>
+  <div class="item item-2" fxFlex="48%">
+      <md-card class="registration-card" style="align-items: inherit">
+        <md-card-header>
+            <md-card-title>
+                <h2>Search Client</h2>
+            </md-card-title>
+        </md-card-header>
+        <md-card-content>
+            <form>
+                <md-input-container>
+                    <input mdInput placeholder="Search Client">
+                </md-input-container>
+                <a md-raised-button color="primary">Search</a>
+            </form>
+        </md-card-content>
+    </md-card>
+  </div>
+</div>

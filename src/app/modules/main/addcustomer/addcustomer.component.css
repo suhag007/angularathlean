@@ -1,0 +1,12 @@
+.container {
+	margin: 10px;
+}
+.registration-card {
+	width: 80%;
+}
+.mat-input-container {
+	width: 100%;
+}
+.mat-grid-tile .mat-figure {
+	align-items: inherit;
+}
