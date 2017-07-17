@@ -1,0 +1,89 @@
+<md-sidenav-container class="example-container">
+    <md-sidenav #sidenav mode="side" opened class="example-sidenav">
+        <md-toolbar color="primary" class="toolbar">
+            <img class="imgstyle" src="assets/logo.jpg">
+            <span class="gymtitle">Athlean Fitness Gym</span>
+        </md-toolbar>
+        <md-list>
+            <md-list-item>
+            <a class="pagelink" routerLink="/main/dashboard">
+                <div class="link-outbody">
+                    <md-icon class="md-icon cyan">dashboard</md-icon>
+                    <span class="sidenav-item-name">Dashboard</span>
+                </div>
+            </a>    
+            </md-list-item>
+            <md-list-item>
+            <a class="pagelink" routerLink="/main/add">
+                <div class="link-outbody">
+                    <md-icon class="md-icon cyan">note_add</md-icon>
+                    <span class="sidenav-item-name">New Registration</span>
+                </div>
+            </a>    
+            </md-list-item>
+            <md-list-item>
+            <a class="pagelink" routerLink="/main/renew">
+                <div class="link-outbody">
+                    <md-icon class="md-icon cyan">autorenew</md-icon>
+                    <span class="sidenav-item-name">Renew Membership</span>
+                </div>
+            </a>    
+            </md-list-item>
+            <md-list-item>
+            <a class="pagelink" routerLink="/main/invoice">
+                <div class="link-outbody">
+                    <md-icon class="md-icon cyan">print</md-icon>
+                    <span class="sidenav-item-name">Print Invoice</span>
+                </div>
+            </a>    
+            </md-list-item>
+            <md-list-item>
+            <a class="pagelink" routerLink="/main/reminder">
+                <div class="link-outbody">
+                    <md-icon class="md-icon cyan">alarm</md-icon>
+                    <span class="sidenav-item-name">Reminder</span>
+                </div>
+            </a>    
+            </md-list-item>
+            <md-list-item>
+            <a class="pagelink" routerLink="/main/setting">
+                <div class="link-outbody">
+                    <md-icon class="md-icon cyan">settings</md-icon>
+                    <span class="sidenav-item-name">Settings</span>
+                </div>
+            </a>    
+            </md-list-item>
+        </md-list>
+    </md-sidenav>
+
+    <div class="side-main">
+        <div class="example-sidenav-content">
+            <md-toolbar color="primary" class="maintoolbar">
+                <div class="main-tool-child">
+                    <div class="searchbar1">
+                        <md-icon class="searchicon">search</md-icon>
+                        <input class="searchbar" type="search" placeholder="Search..." autocomplete="off">
+                    </div>
+                </div>
+                <span class="fillgap"></span>
+                <div>
+                    <button md-icon-button class="btn-pos" [mdMenuTriggerFor]="menu">
+                       <md-icon>more_vert</md-icon>
+                    </button>
+                    <md-menu #menu="mdMenu" xPosition="after" yPosition="below" [overlapTrigger]="false">
+                        <button md-menu-item>
+                         <md-icon style="color: #e27575">settings</md-icon>
+                            <span>Settings</span>
+                            <span> </span>
+                        </button>
+                        <button md-menu-item>
+                             <md-icon style="color: #11114c">exit_to_app</md-icon>
+                             <span>Logout</span>
+                        </button>
+                    </md-menu>
+                </div>
+            </md-toolbar>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</md-sidenav-container>
